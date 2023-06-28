@@ -13,7 +13,8 @@ Create a simple AWS VPC spanning 2 AZs. Public subnets will be created, together
 
 https://github.com/cloudacademy/terraform-aws/tree/main/exercises/exercise1
 
-![AWS Architecture](./doc/AWS-VPC-Nginx.png)
+![image](https://github.com/MatTeoAndru/terraform/assets/106601444/221d73e2-8b68-4d83-9eff-51471151bf9f)
+
 
 #### Project Structure
 
@@ -44,7 +45,8 @@ Create an advanced AWS VPC spanning 2 AZs with both public and private subnets. 
 
 https://github.com/cloudacademy/terraform-aws/tree/main/exercises/exercise2
 
-![AWS Architecture](./doc/AWS-VPC-ASG-Nginx.png)
+![image](https://github.com/MatTeoAndru/terraform/assets/106601444/e8e5e10a-f863-45c9-bd4d-c616439a6304)
+
 
 #### Project Structure
 
@@ -76,7 +78,8 @@ Same AWS architecture as used in Exercise 2. This exercise demonstrates a differ
 
 https://github.com/cloudacademy/terraform-aws/tree/main/exercises/exercise3
 
-![AWS Architecture](./doc/AWS-VPC-ASG-Nginx.png)
+ ![image](https://github.com/MatTeoAndru/terraform/assets/106601444/82f3add6-44de-49d0-9e8b-770a7f877bbd)
+
 
 #### Project Structure
 
@@ -106,7 +109,7 @@ https://github.com/cloudacademy/terraform-aws/tree/main/exercises/exercise3
 ### Exercise 4
 Create an advanced AWS VPC to host a fully functioning cloud native application.
 
-![Cloud Native Application](/doc/voteapp.png)
+
 
 The VPC will span 2 AZs, and have both public and private subnets. An internet gateway and NAT gateway will be deployed into it. Public and private route tables will be established. An application load balancer (ALB) will be installed which will load balance traffic across an auto scaling group (ASG) of Nginx web servers installed with the cloud native application frontend and API. A database instance running MongoDB will be installed in the private zone. Security groups will be created and deployed to secure all network traffic between the various components.
 
@@ -114,7 +117,8 @@ For demonstration purposes only - both the frontend and the API will be deployed
 
 https://github.com/cloudacademy/terraform-aws/tree/main/exercises/exercise4
 
-![AWS Architecture](/doc/AWS-VPC-FullApp.png)
+![image](https://github.com/MatTeoAndru/terraform/assets/106601444/3c00ad97-5859-4dd7-bac0-2ed4ff6b3fd3)
+
 
 The auto scaling web application layer bootstraps itself with both the [Frontend](https://github.com/cloudacademy/voteapp-frontend-react-2020) and [API](https://github.com/cloudacademy/voteapp-api-go) components by pulling down their **latest** respective releases from the following repos:
 
@@ -182,7 +186,8 @@ data "template_cloudinit_config" "config" {
 
 The ALB will configured with a single listener (port 80). 2 target groups will be established. The frontend target group points to the Nginx web server (port 80). The API target group points to the custom API service (port 8080). 
 
-![AWS Architecture](/doc/AWS-VPC-FullApp-TargetGrps.png)
+![image](https://github.com/MatTeoAndru/terraform/assets/106601444/00ae7f42-3519-4798-a19f-6b0a75140796)
+
 
 #### Project Structure
 
